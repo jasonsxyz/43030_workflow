@@ -22,7 +22,7 @@ jobs:
 
       - name: Update README
         run: |
-          echo "### Updated by ${{ github.actor }} on $(date '+%Y-%m-%d %H:%M:%S') [Commit: $(git rev-parse --short HEAD)]" >> README.md
+          echo -e "\n### Updated by ${{ github.actor }} on $(date '+%Y-%m-%d %H:%M:%S') [Commit: $(git rev-parse --short HEAD)]" >> README.md
 
       # commit changes to index.html and README.md
       - name: Commit and Push Changes
